@@ -41,7 +41,7 @@ export default function Home() {
           
             <h3>Nonprofit Website</h3>
             <p>
-              Get a website for a social causes
+              Get a website for a social services
             </p>
          </div> 
         </div>
