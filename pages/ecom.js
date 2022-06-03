@@ -1,3 +1,3 @@
-const export default Ecom() {
+export default function Ecom() {
     return <h2>Ecom Site</h2>
 }
