@@ -1,3 +1,5 @@
 export default function Ecom() {
-    return <h2>Ecom Site</h2>
+    return (
+    <h2>Ecom Site</h2>
+   )
 }
