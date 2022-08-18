@@ -10,6 +10,53 @@ const ReactQuill = dynamic(
   }
 );
 
+const modules = {
+  toolbar: [
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    [{ color: [] }],
+    [{ background: [] }],
+
+    [{ script: "sub" }, { script: "super" }],
+
+    ["link", "image", "video"],
+
+    ["clean"],
+  ],
+  clipboard: {
+    // toggle to add extra line breaks when pasting HTML:
+    matchVisual: false,
+  },
+};
+
+const formats = [
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
+  "color",
+  "background",
+  "script",
+  "code",
+];
+
 export default function QuillWrapper() {
 
   const [value, setValue] = React.useState("");
@@ -32,6 +79,8 @@ export default function QuillWrapper() {
         forwardedRef={quillRef}
         placeholder="Hello World"
         readOnly={false}
+        modules={modules}
+        formats={formats}
       />
       <button onClick={handleClick}>Click</button>
 
