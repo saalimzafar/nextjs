@@ -60,6 +60,7 @@ const formats = [
 export default function QuillWrapper() {
 
   const [value, setValue] = React.useState("");
+  const [ml, setMl] = React.useState("");
   const quillRef = React.useRef(false);
   const ref = React.useRef(false);
 
@@ -67,8 +68,9 @@ export default function QuillWrapper() {
     const editor = quillRef.current.getEditor();
     const unprivilegedEditor = quillRef.current.makeUnprivilegedEditor(editor);
     const delta = unprivilegedEditor.getContents();
-    const markup = unprivilegedEditor.getText()
+    const markup = unprivilegedEditor.getHTML()
     setValue(delta);
+    setMl(markup)
 
 
   };
@@ -90,7 +92,13 @@ export default function QuillWrapper() {
         readOnly={true}
         value={value}
       />
-
+      <ReactQuill
+        forwardedRef={ref}
+        theme={null}
+        readOnly={true}
+        value={ml}
+      />
+      
     </>
   );
 }
