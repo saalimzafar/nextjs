@@ -76,6 +76,7 @@ export default function QuillWrapper() {
 
   return (
     <>
+ <h2>Rich Text Editor </h2>
       <ReactQuill
         forwardedRef={quillRef}
         placeholder="Hello World"
@@ -83,7 +84,7 @@ export default function QuillWrapper() {
         modules={modules}
         formats={formats}
       />
-      <button onClick={handleClick}>Click</button>
+      <button onClick={handleClick}>Post</button>
 
       <ReactQuill
         forwardedRef={ref}
