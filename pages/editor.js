@@ -79,7 +79,7 @@ export default function QuillWrapper() {
  <h2>Rich Text Editor </h2>
       <ReactQuill
         forwardedRef={quillRef}
-        placeholder="Hello World"
+        placeholder="Write something!"
         readOnly={false}
         modules={modules}
         formats={formats}
