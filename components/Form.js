@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { mutate } from "swr";
+/* import { mutate } from "swr";*/
 
 const Form = ({ formId, petForm, forNewPet = true }) => {
   const router = useRouter();
@@ -41,7 +41,7 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
 
       const { data } = await res.json();
 
-      mutate(`/api/pets/${id}`, data, false); // Update the local data without a revalidation
+     /* mutate(`/api/pets/${id}`, data, false); */ // Update the local data without a revalidation
       router.push("/");
     } catch (error) {
       setMessage("Failed to update pet");
