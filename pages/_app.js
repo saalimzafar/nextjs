@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/form.css'
 import 'semantic-ui-css/semantic.min.css'
 import "react-quill/dist/quill.snow.css";
 function MyApp({ Component, pageProps }) {
