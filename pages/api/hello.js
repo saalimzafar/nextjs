@@ -2,7 +2,7 @@
 import fs from 'fs'
 export default (req, res) => {
   let data = "Hello World"
-  fs.writeFile("test.json", data, err => {})
+  fs.writeFile("/tmp/test.json", data, err => {})
   res.statusCode = 200
   res.json({ name: 'Saalim Zafar' })
   
