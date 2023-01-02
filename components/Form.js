@@ -94,7 +94,7 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
   };
 
 
-const handleSubmit = e => {
+const handleSubmit2 = e => {
   e.preventDefault()
   let data = JSON.stringify(form)
   let options = {}
@@ -105,7 +105,7 @@ const handleSubmit = e => {
   fetch(link,options)
   alert("done")
  }
-  const handleSubmit2 = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const errs = formValidate();
     if (Object.keys(errs).length === 0) {
