@@ -1,9 +1,9 @@
 import fs from "fs";
 export default (req, res) => {
-  let petData = require("../../../petData.json");
+  
   let formData = req.body;
-  petData.push(formData);
-  let data = JSON.stringify(petData);
+  
+  let data = JSON.stringify(formData);
   const writeData = () => {
     fs.writeFile("petData.json", data, (err) => {
       if (err) throw err;
