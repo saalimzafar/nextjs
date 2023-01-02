@@ -93,7 +93,19 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
     return err;
   };
 
-  const handleSubmit = (e) => {
+
+const handleSubmit = e => {
+  e.preventDefault()
+  let data = JSON.stringify(form)
+  let options = {}
+  let link = 'http://localhost:3000/api/pet/create'
+  options.method = 'POST'
+  options.headers = {'Content-Type':'application/json'}
+  options.body = data
+  fetch(link,options)
+  alert("done")
+ }
+  const handleSubmit2 = (e) => {
     e.preventDefault();
     const errs = formValidate();
     if (Object.keys(errs).length === 0) {
