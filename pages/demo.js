@@ -24,7 +24,7 @@ const StockTicker = () => {
   }, []);
 
   return (
-    <div className="containerDEmo">
+    <div className="containerDemo">
       <h1 className="headingDemo">Real-Time Stock Market Data</h1>
       {Object.keys(meta).map(data => <h3 className="meta">{meta[data]}</h3>)}
       <div className="grid">
@@ -50,6 +50,7 @@ font-family:sans,arial;
   margin: 0 auto;
   margin-top: 20px;
   background:#cdd;
+  padding:20px;
 }
 
 .headingDemo {
