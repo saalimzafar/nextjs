@@ -162,7 +162,7 @@ Lulls the world as dreams succumb.
                   cursor: pointer;
                   color:silver;
                   padding:5px 10px;
-                  border: 2px solid #fff;
+                  border: 2px solid #000;
               }
               #p1{
                   z-index: 3;
