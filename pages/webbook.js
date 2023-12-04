@@ -160,7 +160,7 @@ Lulls the world as dreams succumb.
                   bottom: 13px;
                   right: 13px;
                   cursor: pointer;
-                  color:silver;
+                  color:#000;
                   padding:5px 10px;
                   border: 2px solid #000;
               }
