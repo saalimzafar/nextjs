@@ -82,7 +82,7 @@ main {
 
 input[type="text"] {
   padding: 10px;
-  margin: 20px;
+  margin: 20px auto;
   border:2px solid #000;
   max-width:300px;
 }
