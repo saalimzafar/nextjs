@@ -77,6 +77,11 @@ const Blog = () => {
 .post p {
 line-height:1.3rem;
 }
+.post img {
+max-width:700px;
+
+
+}
 .post:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
