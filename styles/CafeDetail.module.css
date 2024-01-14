@@ -1,0 +1,54 @@
+/* styles/CafeDetail.module.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cafeImage {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-weight: bold;
+}
+
+.menuTitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.menuList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.menuItemName {
+  font-weight: bold;
+}
+
+.menuItemPrice {
+  color: #0070f3;
+}
