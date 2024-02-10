@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #007bff; /* Lighter background */
+            color: #000; 
+            font-size:20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff; 
+        }
+        #filterInput {
+            width: calc(100% - 22px); 
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 20px;
+        }
+        #brandsTable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        /* Color for even rows */
+        #brandsTable tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Color for odd rows */
+        #brandsTable tr:nth-child(odd) {
+            background-color: #e9e9e9;
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Brands</h1>
+    <input type="text" id="filterInput" placeholder="Filter by Brand">
+    <table id="brandsTable">
+        <thead>
+            <tr>
+                <th>Brand</th>
+            </tr>
+        </thead>
+        <tbody id="brandsBody">
+            {% for brand in brands_data %}
+                <tr>
+                    <td>{{ brand.Acura }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script>
+    const socket = io();
+    let originalbrands = [];
+    let currentFilter = '';
+
+    socket.on('connected', data => {
+        console.log('Connected to server:', data);
+    });
+
+    socket.on('brands_data', brands => {
+        originalbrands = brands; // Store the original data
+        renderbrands(originalbrands); // Render the original data
+    });
+
+    // Filter function
+    document.getElementById('filterInput').addEventListener('input', function() {
+        currentFilter = this.value.toLowerCase();
+        renderbrands(originalbrands); // Re-render with the current filter
+    });
+
+    // Function to render brands
+    function renderbrands(brands) {
+        const filteredbrands = filterbrands(brands, currentFilter);
+        const brandsBody = document.getElementById('brandsBody');
+        brandsBody.innerHTML = '';
+        filteredbrands.forEach(brand => {
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.textContent = brand.Acura;
+            row.appendChild(cell);
+            brandsBody.appendChild(row);
+        });
+    }
+
+    // Function to filter brands
+    function filterbrands(brands, filter) {
+        if (!filter) return brands;
+        return brands.filter(brand => brand.Acura.toLowerCase().includes(filter));
+    }
+</script>
+
+</body>
+</html>
