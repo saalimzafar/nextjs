@@ -8,7 +8,7 @@ const Suppliers = () => {
 
   const readExcel = async () => {
     try {
-      const file = 'https://docs.google.com/spreadsheets/d/1E0Re5Kdyd_uKG3EzaRiT8O9yk4cD_iYdqkxlCJOCeUw/edit?usp=sharing';
+      const file = "https://docs.google.com/spreadsheets/d/10IbDX4gTNYca9BLFlmB3w1G_pM_uvUsgV0rNEe6ihjo/edit?usp=sharing";
       const response = await fetch(file);
       const arrayBuffer = await response.arrayBuffer();
       const data = new Uint8Array(arrayBuffer);
@@ -79,6 +79,8 @@ const Suppliers = () => {
         .title {
           font-size: 24px;
           margin-bottom: 10px;
+          text-align:center;
+          color: #007bff;
         }
         .filter-input {
           padding: 8px;
