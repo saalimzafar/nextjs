@@ -51,14 +51,14 @@ const Suppliers = () => {
       <input
         className="filter-input"
         type="text"
-        placeholder="Filter by model"
+        placeholder="Filter by brand"
         value={filterText}
         onChange={handleFilterChange}
       />
       <table className="table">
         <thead>
           <tr>
-            <th>Model</th>
+            <th>Brand</th>
             {/* Add more headers for additional data */}
           </tr>
         </thead>
