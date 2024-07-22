@@ -7,34 +7,34 @@ const Projects = () => {
         <h2 style={styles.h2}>List of Projects</h2>
         <div style={styles.projectGrid}>
 
-          <a href="nextjs-seven-phi-44.vercel.app/brands" style={{ ...styles.projectCard, ...styles.even }}>
+          <a href="/brands" style={{ ...styles.projectCard, ...styles.even }}>
             <h3 style={styles.h3}>Excel Web App</h3>
-            <p style={styles.p}>This is a description for Project 2.</p>
+            <p style={styles.p}>This is a description for Project 1.</p>
           </a>
 
-          <a href="nextjs-seven-phi-44.vercel.app/cafes" style={{ ...styles.projectCard, ...styles.even }}>
+          <a href="/cafes" style={{ ...styles.projectCard, ...styles.even }}>
             <h3 style={styles.h3}>Cafes Directory</h3>
+            <p style={styles.p}>This is a description for Project 2.</p>
+          </a>
+          <a href="/unitconvertor" style={{ ...styles.projectCard, ...styles.odd }}>
+            <h3 style={styles.h3}>Unit Convertor</h3>
+            <p style={styles.p}>This is a description for Project 3.</p>
+          </a>
+          <a href="/jobboard" style={{ ...styles.projectCard, ...styles.even }}>
+            <h3 style={styles.h3}>Job Board</h3>
             <p style={styles.p}>This is a description for Project 4.</p>
           </a>
-          <a href="nextjs-seven-phi-44.vercel.app/unitconvertor" style={{ ...styles.projectCard, ...styles.odd }}>
-            <h3 style={styles.h3}>Unit Convertor</h3>
+          <a href="/timer" style={{ ...styles.projectCard, ...styles.odd }}>
+            <h3 style={styles.h3}>Time Tracker</h3>
             <p style={styles.p}>This is a description for Project 5.</p>
           </a>
-          <a href="nextjs-seven-phi-44.vercel.app/jobboard" style={{ ...styles.projectCard, ...styles.even }}>
-            <h3 style={styles.h3}>Job Board</h3>
+          <a href="/webbook" style={{ ...styles.projectCard, ...styles.even }}>
+            <h3 style={styles.h3}>Digital Book</h3>
             <p style={styles.p}>This is a description for Project 6.</p>
           </a>
-          <a href="nextjs-seven-phi-44.vercel.app/timer" style={{ ...styles.projectCard, ...styles.odd }}>
-            <h3 style={styles.h3}>Time Tracker</h3>
-            <p style={styles.p}>This is a description for Project 7.</p>
-          </a>
-          <a href="nextjs-seven-phi-44.vercel.app/webbook" style={{ ...styles.projectCard, ...styles.even }}>
-            <h3 style={styles.h3}>Digital Book</h3>
-            <p style={styles.p}>This is a description for Project 8.</p>
-          </a>
-          <a href="nextjs-seven-phi-44.vercel.app/wordpress" style={{ ...styles.projectCard, ...styles.odd }}>
+          <a href="/wordpress" style={{ ...styles.projectCard, ...styles.odd }}>
             <h3 style={styles.h3}>Wordpress Blogs</h3>
-            <p style={styles.p}>This is a description for Project 9.</p>
+            <p style={styles.p}>This is a description for Project 7.</p>
           </a>
         </div>
       </div>
